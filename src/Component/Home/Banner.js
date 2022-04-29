@@ -11,7 +11,7 @@ import banner6 from '../../images/banner6.jpg';
 
 const Banner = () => {
     const settings = {
-      dots: true,
+      // dots: true,
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,

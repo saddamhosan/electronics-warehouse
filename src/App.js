@@ -3,6 +3,7 @@ import './App.css';
 import AddItem from './Component/AddItem/AddItem';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
+import ProductUpdate from './Component/ProductUpdate/ProductUpdate';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import Footer from './Component/Shared/Footer';
 import Header from './Component/Shared/Header';
@@ -15,6 +16,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route
+          path="/inventory/:id"
+          element={
+            <RequireAuth>
+              <ProductUpdate />
+            </RequireAuth>
+          }
+        />
         <Route
           path="/addItem"
           element={

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Watch for man",
+    "img": "https://i.ibb.co/YcrTk7f/john-torcasio-TJrkkhd-B39-E-unsplash.jpg",
+    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "quantity": 1,
+    "price": 200,
+    "supplier": "casio"
+  },
+  {
+    "name": "Watch for woman",
+    "img": "https://i.ibb.co/MMbsTBR/jaelynn-castillo-xf-Ne-B1st-Z-0-unsplash.jpg",
+    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "quantity": 1,
+    "price": 150,
+    "supplier": "castillo"
+  },
+  {
+    "name": "desktop",
+    "img": "https://i.ibb.co/RjWD4c6/quaritsch-photography-3x-Q65ckn-LPk-unsplash.jpg",
+    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "quantity": 1,
+    "price": 900,
+    "supplier": "appal"
+  },
+  {
+    "name": "laptop",
+    "img": "https://i.ibb.co/zJ2PRtw/leon-seibert-Ij-Es-Nib-C4pc-unsplash.jpg",
+    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "quantity": 1,
+    "price": 600,
+    "supplier": "hp"
+  },
+  {
+    "name": "smart tv",
+    "img": "https://i.ibb.co/qkLVbNy/samuel-regan-asante-2-Rg-ULEM-v-AU-unsplash.jpg",
+    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "quantity": 1,
+    "price": 400,
+    "supplier": "sony"
+  },
+  {
+    "name": "min tv",
+    "img": "https://i.ibb.co/gjymFn9/possessed-photography-HWh-R6lbn5x-U-unsplash.jpg",
+    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "quantity": 1,
+    "price": 200,
+    "supplier": "sony"
+  }
+]
