@@ -1,11 +1,14 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import Social from '../Social/Social';
 
 const SignUp = () => {
     const navigate = useNavigate();
+    let location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
 
     const [createUserWithEmailAndPassword, user, loading, error] =
       useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -28,7 +31,7 @@ const SignUp = () => {
     };
 
     if (user) {
-      navigate("/");
+      navigate(from, { replace: true });
     }
     return (
       <div className="w-2/5 mx-auto font-serif border rounded-2xl py-5">
