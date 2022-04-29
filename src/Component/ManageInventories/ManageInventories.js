@@ -22,16 +22,19 @@ const ManageInventories = () => {
                 Product name
               </th>
               <th scope="col" className="px-6 py-3">
-                Color
+                Supplier
               </th>
               <th scope="col" className="px-6 py-3">
-                Category
+                Quantity
               </th>
               <th scope="col" className="px-6 py-3">
                 Price
               </th>
               <th scope="col" className="px-6 py-3">
-                <span className="sr-only">Edit</span>
+                Image
+              </th>
+              <th scope="col" className="px-6 py-3 text-center">
+                Delate
               </th>
             </tr>
           </thead>
@@ -53,7 +56,7 @@ const ManageInventories = () => {
                       <td className="px-6 py-4">
                         <img className="w-24" src={product.img} alt="" />
                       </td>
-                      <td className="px-6 py-4 text-right">
+                      <td className="px-6 py-4 text-center">
                         <button className="font-bold text-2xl text-red-600  hover:underline">
                           X
                         </button>
