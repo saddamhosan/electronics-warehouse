@@ -3,6 +3,7 @@ import './App.css';
 import AddItem from './Component/AddItem/AddItem';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
+import ManageInventories from './Component/ManageInventories/ManageInventories';
 import ProductUpdate from './Component/ProductUpdate/ProductUpdate';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import Footer from './Component/Shared/Footer';
@@ -21,6 +22,14 @@ function App() {
           element={
             <RequireAuth>
               <ProductUpdate />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/manageInventories"
+          element={
+            <RequireAuth>
+              <ManageInventories />
             </RequireAuth>
           }
         />
