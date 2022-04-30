@@ -32,7 +32,7 @@ const AddItem = () => {
           required
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder="Product Name"
         />
         <input
           className="block border w-10/12 my-3 p-2 rounded-xl mx-auto"
@@ -49,7 +49,7 @@ const AddItem = () => {
           required
           type="text"
           name="img"
-          placeholder="Image"
+          placeholder="Product Image"
         />
         <input
           className="block border w-10/12 my-3 p-2 rounded-xl mx-auto"

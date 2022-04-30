@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
+import { CircleLoader } from "react-spinners";
 import auth from "../../firebase.init";
 
 const RequireAuth = ({ children }) => {
@@ -9,7 +10,11 @@ const RequireAuth = ({ children }) => {
 
 
   if (loading) {
-    return <p>Loading...</p>;
+    return (
+      <p className="flex justify-center items-center">
+        <CircleLoader color="blue" size={60} />
+      </p>
+    );
   }
 
   if (error) {

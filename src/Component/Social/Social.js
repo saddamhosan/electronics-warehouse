@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
 
 const Social = () => {
@@ -20,7 +21,11 @@ const Social = () => {
 
     return (
       <div>
-        {loading && <p>Loading...</p>}
+        {loading && (
+          <p className="flex justify-center items-center">
+            <CircleLoader color="blue" size={60} />
+          </p>
+        )}
         {error && <p className="text-center text-red-600">{error?.message}</p>}
         <div className="flex items-center mx-8">
           <div className="bg-gray-400 w-1/2 h-[1px]"></div>

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
 import Social from '../Social/Social';
+
 
 const Login = () => {
     const [email,setEmail]=useState('')
@@ -82,7 +84,11 @@ const Login = () => {
           </span>
         </p>
 
-        {(loading || sending) && <p>Loading...</p>}
+        {(loading || sending) && (
+          <p className="flex justify-center">
+            <CircleLoader color="blue" size={60} />
+          </p>
+        )}
         {(error || reSetPassError) && (
           <p className="text-center text-red-600">
             {error?.message} {reSetPassError?.message}

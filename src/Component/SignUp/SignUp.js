@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from 'react-router-dom';
+import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
 import Social from '../Social/Social';
 
@@ -71,7 +72,11 @@ const SignUp = () => {
             required
           />
           <br />
-          {(loading || updating) && <p>Loading...</p>}
+          {(loading || updating) && (
+            <p className="flex justify-center">
+              <CircleLoader color="blue" size={60} />
+            </p>
+          )}
           {(error || UPerror) && (
             <p className="text-center text-red-600">{error?.message}</p>
           )}
