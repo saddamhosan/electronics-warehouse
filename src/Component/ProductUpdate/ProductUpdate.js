@@ -31,7 +31,7 @@ fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
   .then((res) => res.json())
   .then((data) => {
     if (data.modifiedCount > 0) {
-      console.log("Added Successfully ");
+      console.log("Added Quantity Successfully ");
       navigate("/");
     }
   });
