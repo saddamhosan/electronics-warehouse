@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
 import Social from '../Social/Social';
+import useToken from './../hooks/useToken';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -13,6 +14,8 @@ const SignUp = () => {
 
     const [createUserWithEmailAndPassword, user, loading, error] =
       useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+      const [token]=useToken(user)
 
     const [updateProfile, updating, UPerror] = useUpdateProfile(auth);
 
@@ -31,7 +34,7 @@ const SignUp = () => {
       }
     };
 
-    if (user) {
+    if (token) {
       navigate(from, { replace: true });
     }
     return (

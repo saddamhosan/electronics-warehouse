@@ -3,6 +3,7 @@ import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
+import useToken from './../hooks/useToken';
 
 const Social = () => {
     const navigate=useNavigate()
@@ -11,12 +12,14 @@ const Social = () => {
     
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
+    const [token]=useToken(user)
+
     const handleGoogleSignIn=()=>{
         signInWithGoogle();
     }
 
-    if(user){
-        navigate(from, { replace: true });
+    if (token) {
+      navigate(from, { replace: true });
     }
 
     return (

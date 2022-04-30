@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
 import Social from '../Social/Social';
+import useToken from './../hooks/useToken';
 
 
 const Login = () => {
@@ -23,6 +24,8 @@ const Login = () => {
       const [sendPasswordResetEmail, sending, reSetPassError] =
         useSendPasswordResetEmail(auth);
 
+        const [token]=useToken(user)
+
     const handleLogin = async (e) => {
       e.preventDefault();
       const email = e.target.email.value;
@@ -33,7 +36,7 @@ const Login = () => {
        await sendPasswordResetEmail(email)
        alert('email sent')
     }
-    if (user) {
+    if (token) {
       navigate(from, { replace: true });
     }
     return (
