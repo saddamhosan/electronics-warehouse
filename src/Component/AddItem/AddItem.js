@@ -1,7 +1,10 @@
 import axios from "axios";
 import React from "react";
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from "../../firebase.init";
 
 const AddItem = () => {
+    const [user]=useAuthState(auth)
   const handleAddItem = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -37,6 +40,9 @@ const AddItem = () => {
           type="email"
           name="email"
           placeholder="Email"
+          value={user?.email}
+          readOnly
+          disabled
         />
         <input
           className="block border w-10/12 my-3 p-2 rounded-xl mx-auto"
