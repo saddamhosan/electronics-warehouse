@@ -15,15 +15,20 @@ const Header = () => {
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
-          <li>
-            <NavLink to="/manageItems">Manage Items</NavLink>
-          </li>
-          <li>
-            <NavLink to="/addItem">Add Item</NavLink>
-          </li>
-          <li>
-            <NavLink to="/myItems">My Items</NavLink>
-          </li>
+          {user?.uid && (
+            <>
+              <li>
+                <NavLink to="/manageInventories">Manage Inventories</NavLink>
+              </li>
+              <li>
+                <NavLink to="/addItem">Add Item</NavLink>
+              </li>
+              <li>
+                <NavLink to="/myItems">My Items</NavLink>
+              </li>
+            </>
+          )}
+
           <li>
             {user?.uid ? (
               <>

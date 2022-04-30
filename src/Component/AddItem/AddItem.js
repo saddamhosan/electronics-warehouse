@@ -5,12 +5,13 @@ const AddItem = () => {
   const handleAddItem = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
+    const email=e.target.email.value
     const img = e.target.img.value;
     const description = e.target.description.value;
     const supplier = e.target.supplier.value;
     const quantity = e.target.quantity.value;
     const price = e.target.price.value;
-    const newItem = { name, img, description, supplier, quantity, price };
+    const newItem = { name,email, img, description, supplier, quantity, price };
     console.log(newItem);
     axios.post("https://enigmatic-beach-29740.herokuapp.com/product", newItem).then((result) => {
       if (result.status === 200) {
@@ -29,6 +30,13 @@ const AddItem = () => {
           type="text"
           name="name"
           placeholder="Name"
+        />
+        <input
+          className="block border w-10/12 my-3 p-2 rounded-xl mx-auto"
+          required
+          type="email"
+          name="email"
+          placeholder="Email"
         />
         <input
           className="block border w-10/12 my-3 p-2 rounded-xl mx-auto"
