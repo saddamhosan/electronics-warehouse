@@ -136,11 +136,11 @@ const ManageInventories = () => {
               {num + 1}
             </button>
           ))}
-          <select
+          <select 
             onChange={(e) => setLimit(e.target.value)}
             className="bg-black text-white px-3"
           >
-            <option value="5">5</option>
+            <option defaultValue="5">5</option>
             <option value="10">10</option>
             <option value="15">15</option>
           </select>

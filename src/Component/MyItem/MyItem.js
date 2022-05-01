@@ -2,18 +2,20 @@ import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyItem = () => {
     const [user]=useAuthState(auth)
     const email=user?.email
+    console.log(user,email);
     const [products,setProducts]=useState([])
     const navigate=useNavigate()
 
     useEffect(() => {
       (async () => {
-        const url = `https://enigmatic-beach-29740.herokuapp.com/${email}`;
+        const url = `https://enigmatic-beach-29740.herokuapp.com/items?email=${email}`;
         try {
           const { data } = await axios.get(url, {
             headers: {
@@ -22,8 +24,7 @@ const MyItem = () => {
           });
           setProducts(data);
         } catch (error) {
-          //tost
-          console.log(error.message);
+          toast.error(error.message,{id:'error'});
           if (error.response.status === 401 || error.response.status === 403) {
             signOut(auth);
             navigate("/login");

@@ -1,48 +1,54 @@
 [
   {
     "name": "Watch for man",
-    "img": "https://i.ibb.co/YcrTk7f/john-torcasio-TJrkkhd-B39-E-unsplash.jpg",
-    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "email": "saddamcox7700@gmail.com",
+    "img": "https://i.ibb.co/ygrDtzq/banner2.jpg",
+    "description": "Japanese automatic movement with analog display.Round watch featuring corrugated unidirectional bezel, luminous hands/markers, and magnified date window at three o'clock.",
     "quantity": 1,
     "price": 200,
     "supplier": "casio"
   },
   {
     "name": "Watch for woman",
-    "img": "https://i.ibb.co/MMbsTBR/jaelynn-castillo-xf-Ne-B1st-Z-0-unsplash.jpg",
-    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "email": "saddamcox7700@gmail.com",
+    "img": "https://i.ibb.co/cN95TkH/banner1.jpg",
+    "description": "Round watch featuring corrugated unidirectional bezel, luminous hands/markers, and magnified date window at three o'clock.Japanese automatic movement with analog display.",
     "quantity": 1,
     "price": 150,
     "supplier": "castillo"
   },
   {
     "name": "desktop",
+    "email": "saddamcox7700@gmail.com",
     "img": "https://i.ibb.co/RjWD4c6/quaritsch-photography-3x-Q65ckn-LPk-unsplash.jpg",
-    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "description": "Helps create an organized workspace by elevating hard drives and other peripherals off your desk.Adds a space-saving shelf that mounts to the back or front of your iMac or Apple Display",
     "quantity": 1,
     "price": 900,
     "supplier": "appal"
   },
   {
     "name": "laptop",
-    "img": "https://i.ibb.co/zJ2PRtw/leon-seibert-Ij-Es-Nib-C4pc-unsplash.jpg",
-    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "email": "saddamcox7700@gmail.com",
+    "img": "https://i.ibb.co/1QWXYtv/banner3.jpg",
+    "description": "Integrated Intel Iris Xe Graphics, 13.3 inch FHD (1920 x 1080) IPS 400 nits, 100% sRGB Display. 11th Gen Intel 4-Core i5-1135G7 (> i7-1065G7), Up to 4.2 GHz with Intel Turbo Boost Technology, 8MB Smart Cache, 8 Threads",
     "quantity": 1,
     "price": 600,
     "supplier": "hp"
   },
   {
     "name": "smart tv",
-    "img": "https://i.ibb.co/qkLVbNy/samuel-regan-asante-2-Rg-ULEM-v-AU-unsplash.jpg",
-    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "email": "saddamcox7700@gmail.com",
+    "img": "https://i.ibb.co/jz9M4jJ/banner6.jpg",
+    "description": "4K LED Android Smart TV.Built-in Google Assistant & Chromecast.Hexa Chroma Drive with HDR10.Dimension w/out stand (W x H x D): 968 x 570 x 91 mm.Dimension with stand (W x H x D): 968 x 608 x 212 mm",
     "quantity": 1,
     "price": 400,
     "supplier": "sony"
   },
   {
     "name": "min tv",
-    "img": "https://i.ibb.co/gjymFn9/possessed-photography-HWh-R6lbn5x-U-unsplash.jpg",
-    "description": "Uploaded content added to Saddam Hossain's images. You can create a new album with the content just uploaded or move it to an existing album.",
+    "email": "saddamcox7700@gmail.com",
+    "img": "https://i.ibb.co/mH5wrrg/banner4.jpg",
+    "description": "Portable TV, in line with ATSC, can watch digital TV and ATV.USB port, SD/MMC card slot, play U disk drive content, support 1080p video, MKV, MOV, AVI, WMV, MP4, FLV, MPEG1-4, RMVB, 1080P video MP3, video.",
     "quantity": 1,
     "price": 200,
     "supplier": "sony"

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-hot-toast';
 import auth from "../../firebase.init";
 
 const AddItem = () => {
@@ -18,7 +19,7 @@ const AddItem = () => {
     console.log(newItem);
     axios.post("https://enigmatic-beach-29740.herokuapp.com/product", newItem).then((result) => {
       if (result.status === 200) {
-        console.log("Added successfully");
+        toast.success("Added successfully",{id:'add'});
         e.target.reset();
       }
     });
