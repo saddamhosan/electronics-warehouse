@@ -26,7 +26,8 @@ const AddItem = () => {
   };
 
   return (
-    <div className="w-2/3 mx-auto border my-20 py-10 rounded-2xl">
+    <div className="w-2/3 mx-auto border my-20 py-10 rounded-2xl font-serif">
+      <p className="text-center text-3xl text-blue-500 font-bold mb-4">Add new product</p>
       <form onSubmit={handleAddItem}>
         <input
           className="block border w-10/12 my-3 p-2 rounded-xl mx-auto"

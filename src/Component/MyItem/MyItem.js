@@ -9,7 +9,6 @@ import auth from '../../firebase.init';
 const MyItem = () => {
     const [user]=useAuthState(auth)
     const email=user?.email
-    console.log(user,email);
     const [products,setProducts]=useState([])
     const navigate=useNavigate()
 
