@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
+import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
@@ -28,13 +29,16 @@ const SignUp = () => {
       if (password === confirmPassword) {
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
+        toast.success("Verification mail sent", { id: "veri" });
         e.target.reset();
       } else {
-        alert("password miss match");
+        toast.error("password miss match",{id:'miss'});
       }
     };
 
     if (token) {
+      toast.success("Login success", { id: "login" });
+      
       navigate(from, { replace: true });
     }
     return (

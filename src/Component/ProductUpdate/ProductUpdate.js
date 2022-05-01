@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 
 const ProductUpdate = () => {
@@ -18,7 +19,7 @@ const ProductUpdate = () => {
 const handleQuantity=(e)=>{
   e.preventDefault()
   const quantity=e.target.quantity.value
-  const newQuantity = product?.quantity + parseInt(quantity);
+  const newQuantity = parseInt(product?.quantity) + parseInt(quantity);
 
 
 fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
@@ -31,8 +32,8 @@ fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
   .then((res) => res.json())
   .then((data) => {
     if (data.modifiedCount > 0) {
-      console.log("Added Quantity Successfully ");
-      navigate("/");
+      toast.success(`Added ${quantity} product Successfully `,{id:'add pd'});
+      navigate("/manageInventories");
     }
   });
 }
@@ -50,8 +51,8 @@ fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
   .then((res) => res.json())
   .then((data) => {
     if (data.modifiedCount > 0) {
-      console.log("successfully delivered");
-      navigate("/");
+      toast.success("successfully delivered",{id:'deliver'});
+      navigate("/manageInventories");
     }
   });
 }

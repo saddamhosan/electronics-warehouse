@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
@@ -19,6 +20,7 @@ const Social = () => {
     }
 
     if (token) {
+      toast.success("Login success", { id: "login" });
       navigate(from, { replace: true });
     }
 

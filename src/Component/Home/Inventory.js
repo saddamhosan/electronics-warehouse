@@ -9,10 +9,8 @@ const Inventory = () => {
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get(
-        "https://enigmatic-beach-29740.herokuapp.com/products"
-      );
-      setProducts(data);
+      const { data } = await axios.get("https://enigmatic-beach-29740.herokuapp.com/products");
+      setProducts(data.result);
     })();
   }, []);
 

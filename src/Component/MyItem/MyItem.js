@@ -13,7 +13,7 @@ const MyItem = () => {
 
     useEffect(() => {
       (async () => {
-        const url = `https://enigmatic-beach-29740.herokuapp.com/items?email=${email}`;
+        const url = `https://enigmatic-beach-29740.herokuapp.com/${email}`;
         try {
           const { data } = await axios.get(url, {
             headers: {

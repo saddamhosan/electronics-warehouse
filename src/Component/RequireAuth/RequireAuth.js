@@ -11,7 +11,7 @@ const RequireAuth = ({ children }) => {
 
   if (loading) {
     return (
-      <p className="flex justify-center items-center">
+      <p className="flex justify-center">
         <CircleLoader color="blue" size={60} />
       </p>
     );

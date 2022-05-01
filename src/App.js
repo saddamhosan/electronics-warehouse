@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddItem from './Component/AddItem/AddItem';
@@ -54,6 +55,7 @@ function App() {
         <Route path="/signUp" element={<SignOut />} />
       </Routes>
       <Footer />
+      <Toaster />
     </div>
   );
 }

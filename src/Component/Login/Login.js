@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
@@ -34,9 +35,10 @@ const Login = () => {
     };
     const handleResetPass=async()=>{
        await sendPasswordResetEmail(email)
-       alert('email sent')
+       toast.success("Email sent", { id: "login" });
     }
     if (token) {
+      toast.success("Login success", { id: "login" });
       navigate(from, { replace: true });
     }
     return (
