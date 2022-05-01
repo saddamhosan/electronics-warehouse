@@ -2,10 +2,12 @@ import axios from "axios";
 import React from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-hot-toast';
+import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const AddItem = () => {
     const [user]=useAuthState(auth)
+    const navigate=useNavigate()
   const handleAddItem = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -21,6 +23,7 @@ const AddItem = () => {
       if (result.status === 200) {
         toast.success("Added successfully",{id:'add'});
         e.target.reset();
+        navigate('/myItems')
       }
     });
   };
@@ -54,9 +57,9 @@ const AddItem = () => {
             required
             type="text"
             name="img"
-            placeholder="Product Image"
+            placeholder="Product Image url"
           />
-          <input
+          <textarea
             className="block border w-10/12 my-3 p-2 rounded-xl mx-auto"
             required
             type="text"
