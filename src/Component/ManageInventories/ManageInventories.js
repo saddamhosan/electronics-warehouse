@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { RiDeleteBin5Line } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 
 const ManageInventories = () => {
@@ -114,7 +115,7 @@ const ManageInventories = () => {
                         onClick={() => handleDeleteProduct(product._id)}
                         className="font-bold text-2xl text-red-600  hover:underline"
                       >
-                        X
+                        <RiDeleteBin5Line/>
                       </button>
                     </td>
                   </tr>

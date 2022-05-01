@@ -12,7 +12,7 @@ const Product = ({product}) => {
     return (
       <div>
         <div>
-          <img className="h-[250px]" src={img} alt="" />
+          <img className="h-[250px] w-full" src={img} alt="" />
         </div>
         <div>
           <p>{name}</p>
