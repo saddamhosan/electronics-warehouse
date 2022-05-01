@@ -10,7 +10,7 @@ const Header = () => {
   const [user] = useAuthState(auth);
     return (
       <div className="shadow-md w-full sticky top-0 left-0 z-50">
-        <div className="h-16 md:flex items-center justify-between bg-blue-600 py-4 md:px-10 px-7 ">
+        <div className="h-16 md:flex items-center justify-between bg-blue-500 py-4 md:px-10 px-7 ">
           <div
             className="flex items-center text-white font-bold text-2xl md:text-3xl cursor-pointer  font-[Poppins] 
       "
@@ -26,7 +26,7 @@ const Header = () => {
           </div>
 
           <ul
-            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-blue-600 left-0 w-full  md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
+            className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-blue-500 left-0 w-full  md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
               open ? "top-16 " : "top-[-490px]"
             }`}
           >
