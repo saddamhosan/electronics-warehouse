@@ -22,7 +22,7 @@ const Brands = () => {
       cssEase: "linear",
     };
     return (
-      <div className="my-10 font-serif bg-slate-100 py-5">
+      <div className="mt-10 mb-20 font-serif bg-slate-100 py-5">
         <h4 className="text-center text-2xl">In our warehouse you will find</h4>
         <h1 className="text-center text-4xl font-bold text-cyan-400">
           Only the best brands

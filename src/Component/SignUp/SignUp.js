@@ -42,7 +42,7 @@ const SignUp = () => {
       navigate(from, { replace: true });
     }
     return (
-      <div className="w-2/5 mx-auto font-serif border rounded-2xl py-5">
+      <div className="w-11/12 my-4 md:w-2/5 mx-auto font-serif border rounded-2xl py-5">
         <h1 className="text-center text-2xl text-blue-500 font-bold my-3">
           Please Register
         </h1>
@@ -78,7 +78,14 @@ const SignUp = () => {
             placeholder="Confirm Password"
             required
           />
-          <br />
+
+          <div className="flex justify-center mt-3">
+            <input
+              className="bg-blue-600 text-white text-xl font-bold px-8 py-2 rounded-xl cursor-pointer"
+              type="submit"
+              value="Register"
+            />
+          </div>
           {(loading || updating) && (
             <p className="flex justify-center">
               <CircleLoader color="blue" size={60} />
@@ -87,11 +94,6 @@ const SignUp = () => {
           {(error || UPerror) && (
             <p className="text-center text-red-600">{error?.message}</p>
           )}
-          <input
-            className="bg-blue-600 text-white text-xl font-bold px-8 py-2 rounded-xl cursor-pointer"
-            type="submit"
-            value="Register"
-          />
         </form>
         <p className="text-xl text-center my-3">
           Already have an account?

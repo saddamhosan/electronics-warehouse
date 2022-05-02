@@ -10,17 +10,33 @@ const Product = ({product}) => {
     }
 
     return (
-      <div>
-        <div>
-          <img className="h-[250px] w-full" src={img} alt="" />
+      <div className="shadow-2xl rounded-xl relative">
+        <div className="">
+          <img className="h-[250px] w-full rounded-xl rounded-b-none" src={img} alt="" />
         </div>
-        <div>
-          <p>{name}</p>
-          <p>{description}</p>
-          <p>Supplier: {supplier}</p>
-          <p>Quantity: {quantity}</p>
-          <p>$ {price}</p>
-          <button onClick={()=>handleUpdate(_id)} className='bg-blue-600 text-white font-bold px-5 py-2 mt-2 rounded-xl'>Update</button>
+        <div className="my-6 px-6 ">
+          <p className="text-center text-3xl text-blue-500 font-bold font-serif">
+            {name}
+          </p>
+          <p className="text-lg text-gray-500 my-2">{description}</p>
+          <p className="text-xl font-bold">
+            Supplier:{" "}
+            <span className="text-xl text-gray-600 font-bold">{supplier}</span>
+          </p>
+          <p className="text-xl font-bold">
+            Quantity:{" "}
+            <span className="text-xl text-gray-600 font-bold">{quantity}</span>
+          </p>
+          <p className="text-xl font-bold pb-10">
+            Price:{" "}
+            <span className="text-xl text-gray-600 font-bold">$ {price}</span>
+          </p>
+          <button
+            onClick={() => handleUpdate(_id)}
+            className="absolute bottom-4 bg-blue-600 text-white font-bold px-5 py-2 mt-2 rounded-xl"
+          >
+            Update
+          </button>
         </div>
       </div>
     );

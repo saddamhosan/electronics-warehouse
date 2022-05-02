@@ -63,7 +63,7 @@ fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
       <div className="md:w-1/2">
         <img className="h-[350px]" src={img} alt="" />
       </div>
-      <div className="md:w-1/2 font-">
+      <div className="md:w-1/2 font-serif text-center">
         <p className="text-3xl font-bold text-center text-blue-600 mb-3">{name}</p>
         <p className="text-lg text-gray-500 my-2">{description}</p>
         <p className="text-xl font-bold">

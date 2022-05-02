@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
+import { FcGoogle } from "react-icons/fc";
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
 import auth from '../../firebase.init';
@@ -42,6 +43,7 @@ const Social = () => {
             onClick={handleGoogleSignIn}
             className="border px-16 py-2 my-5 rounded-2xl"
           >
+            <FcGoogle className='inline text-3xl mr-4'/>
             Continue With Google
           </button>
         </div>

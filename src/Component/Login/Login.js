@@ -42,7 +42,7 @@ const Login = () => {
       navigate(from, { replace: true });
     }
     return (
-      <div className="w-2/5 mx-auto font-serif border rounded-2xl py-5">
+      <div className="w-11/12 md:w-2/5 mx-auto font-serif border rounded-2xl py-5 my-4 shadow-xl">
         <h1 className="text-center text-2xl text-blue-500 font-bold my-3">
           Please Login
         </h1>
@@ -64,11 +64,13 @@ const Login = () => {
             required
           />
           <br />
-          <input
-            className="bg-blue-600 text-white text-xl font-bold px-8 py-2 rounded-xl"
-            type="submit"
-            value="Login"
-          />
+          <div className='flex justify-center mt-3'>
+            <input
+              className="bg-blue-600 text-white text-xl font-bold px-8 py-2 rounded-xl"
+              type="submit"
+              value="Login"
+            />
+          </div>
         </form>
         <p className="text-xl text-center my-3">
           Don't have an account?
