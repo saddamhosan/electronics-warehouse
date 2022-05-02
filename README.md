@@ -16,6 +16,7 @@
 - React-icons
 - React-slick-slider
 - React-spinners
+- Sweet-Alert
 
 ## Use packages on this project server side
 

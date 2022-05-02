@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const ManageInventories = () => {
   const [page,setPage]=useState(0)
@@ -22,22 +22,33 @@ const ManageInventories = () => {
     }, [limit,page]);
 
     const handleDeleteProduct=(id)=>{
-      const confirm=window.confirm('are you sure you want to delete')
-      if(confirm){
-        const url = `https://enigmatic-beach-29740.herokuapp.com/product/${id}`;
-        fetch(url, {
-          method: "delete",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.deletedCount > 0) {
-              const rest = products.filter((product) => product._id !== id);
-              setProducts(rest);
-              toast.success("delete successfully", {id:'delete'});
-            }
-          });
-      }
-      
+       Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire("Deleted!", "Your file has been deleted.", "success");
+        }
+
+        if (result.isConfirmed) {
+          const url = `https://enigmatic-beach-29740.herokuapp.com/product/${id}`;
+          fetch(url, {
+            method: "delete",
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.deletedCount > 0) {
+                const rest = products.filter((product) => product._id !== id);
+                setProducts(rest);
+              }
+            });
+        }
+      });
     }
     
     
