@@ -33,7 +33,7 @@ const Header = () => {
             <li className="md:ml-8 text-xl md:my-0 my-7">
               <NavLink
                 className={({ isActive }) =>
-                  `text-white font-semibold hover:text-orange-300 ${
+                  `text-white font-semibold hover:text-orange-400 ${
                     isActive ? "border-b-2 border-red-400 pb-1" : ""
                   }`
                 }
@@ -47,19 +47,19 @@ const Header = () => {
                 <li className="md:ml-8 text-xl md:my-0 my-7">
                   <NavLink
                     className={({ isActive }) =>
-                      `text-white font-semibold hover:text-orange-300 ${
+                      `text-white font-semibold hover:text-orange-400 ${
                         isActive ? "border-b-2 border-red-400 pb-1" : ""
                       }`
                     }
                     to="/manageInventories"
                   >
-                    Manage Inventories
+                    Inventories
                   </NavLink>
                 </li>
                 <li className="md:ml-8 text-xl md:my-0 my-7">
                   <NavLink
                     className={({ isActive }) =>
-                      `text-white font-semibold hover:text-orange-300 ${
+                      `text-white font-semibold hover:text-orange-400 ${
                         isActive ? "border-b-2 border-red-400 pb-1" : ""
                       }`
                     }
@@ -71,7 +71,7 @@ const Header = () => {
                 <li className="md:ml-8 text-xl md:my-0 my-7">
                   <NavLink
                     className={({ isActive }) =>
-                      `text-white font-semibold hover:text-orange-300 ${
+                      `text-white font-semibold hover:text-orange-400 ${
                         isActive ? "border-b-2 border-red-400 pb-1" : ""
                       }`
                     }
@@ -87,22 +87,18 @@ const Header = () => {
               {user?.uid ? (
                 <>
                   <button
-                    className="text-white font-semibold hover:text-orange-300"
+                    className="text-white font-semibold hover:text-orange-400"
                     onClick={() => signOut(auth)}
                   >
                     Logout
                   </button>
-                  <span className="text-gray-400 font-semibold hover:text-orange-300 ml-4">
+                  <span className="text-gray-400 font-semibold hover:text-orange-400 ml-4">
                     {user.displayName}
                   </span>
                 </>
               ) : (
                 <NavLink
-                  className={({ isActive }) =>
-                    `text-white font-semibold hover:text-orange-300${
-                      isActive ? "border-b-2 border-red-600 pb-1" : ""
-                    }`
-                  }
+                  className="text-white font-semibold hover:text-orange-400"
                   to="/login"
                 >
                   login

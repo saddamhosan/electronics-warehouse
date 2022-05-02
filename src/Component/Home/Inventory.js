@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Product from "../Product/Product";
@@ -8,10 +7,14 @@ const Inventory = () => {
   const navigate=useNavigate()
 
   useEffect(() => {
-    (async () => {
-      const { data } = await axios.get("https://enigmatic-beach-29740.herokuapp.com/products");
-      setProducts(data.result);
-    })();
+    const url = "https://enigmatic-beach-29740.herokuapp.com/products";
+    // (async () => {
+    //   const { data } = await axios.get("https://enigmatic-beach-29740.herokuapp.com/products");
+    //   setProducts(data.result);
+    // })();
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setProducts(data.result));
   }, []);
 
   return (

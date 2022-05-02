@@ -3,7 +3,7 @@ import subBanner from "../../images/subscribe.jpg";
 
 const Subscribe = () => {
   return (
-    <div className="h-[80vh] my-10 flex justify-center items-center">
+    <div className="h-[80vh] mt-10 flex justify-center items-center">
       <img
         className="w-full h-[80vh] absolute -z-50 opacity-50"
         src={subBanner}
