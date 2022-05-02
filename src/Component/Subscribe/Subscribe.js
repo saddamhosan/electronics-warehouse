@@ -19,12 +19,12 @@ const Subscribe = () => {
         </p>
 
         <input
-          className="text-2xl p-2 "
+          className="text-2xl p-2 w-10/12 mx-auto block md:w-2/3 md:inline "
           type="email"
           placeholder="Your email address"
           required
         />
-        <button className="text-2xl p-2 bg-cyan-400 font-semibold">subscribe</button>
+        <button className="mt-4 block mx-auto md:inline text-2xl p-2 bg-cyan-400 font-semibold">subscribe</button>
         <p className="text-center text-lg font-bold my-3">
           *YOU CAN UNSUBSCRIBE ANYTIME
         </p>

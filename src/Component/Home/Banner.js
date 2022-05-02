@@ -24,23 +24,27 @@ const Banner = () => {
       <div className="mb-6 px-7 bg-slate-200">
         <Slider {...settings}>
           <div>
-            <img className=" md:h-[80vh] w-full" src={banner1} alt="" />
+            <img className="h-[40vh] md:h-[80vh] w-full" src={banner1} alt="" />
             {/* <h1 className='absolute top-24 '>woman watch  </h1> */}
           </div>
           <div>
-            <img className="md:h-[80vh] h-[50vh] w-full" src={banner2} alt="" />
+            <img
+              className=" md:h-[80vh] h-[40vh] w-full"
+              src={banner2}
+              alt=""
+            />
           </div>
           <div>
-            <img className="md:h-[80vh] h-[50vh] w-full" src={banner3} alt="" />
+            <img className="md:h-[80vh] h-[40vh] w-full" src={banner3} alt="" />
           </div>
           <div>
-            <img className="md:h-[80vh] h-[50vh] w-full" src={banner4} alt="" />
+            <img className="md:h-[80vh] h-[40vh] w-full" src={banner4} alt="" />
           </div>
           <div>
-            <img className="md:h-[80vh] h-[50vh] w-full" src={banner5} alt="" />
+            <img className="md:h-[80vh] h-[40vh] w-full" src={banner5} alt="" />
           </div>
           <div>
-            <img className="md:h-[80vh] w-full h-[50vh]" src={banner6} alt="" />
+            <img className="md:h-[80vh] w-full h-[40vh]" src={banner6} alt="" />
           </div>
         </Slider>
       </div>

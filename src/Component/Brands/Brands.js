@@ -58,7 +58,7 @@ const Brands = () => {
             </div>
           </Slider>
         </div>
-        <p className="text-center md:px-20">
+        <p className="text-center md:px-20 px-6">
           Whether you're a Technician, Musician, Professional or Hobbyist we
           here at Electronics Warehouse are here to help.Come in, ask your
           questions and get helpful answers. Electronics Warehouse. For products
