@@ -6,6 +6,7 @@ import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
 import ManageInventories from './Component/ManageInventories/ManageInventories';
 import MyItem from './Component/MyItem/MyItem';
+import NotFound from './Component/NotFound/NotFound';
 import ProductUpdate from './Component/ProductUpdate/ProductUpdate';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
 import Footer from './Component/Shared/Footer';
@@ -53,6 +54,7 @@ function App() {
         />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignOut />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       <Toaster />
