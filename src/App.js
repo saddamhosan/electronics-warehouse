@@ -2,6 +2,7 @@ import { Toaster } from 'react-hot-toast';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import AddItem from './Component/AddItem/AddItem';
+import Blogs from './Component/Blogs/Blogs';
 import Home from './Component/Home/Home';
 import Login from './Component/Login/Login';
 import ManageInventories from './Component/ManageInventories/ManageInventories';
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route
           path="/inventory/:id"
           element={

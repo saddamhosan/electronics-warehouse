@@ -27,7 +27,7 @@ const Inventory = () => {
           <Product key={product._id} product={product} />
         ))}
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-end mr-10">
         <button
           onClick={() => navigate("/manageInventories")}
           className="rounded-xl bg-blue-500 text-white text-xl font-bold px-6 py-2"

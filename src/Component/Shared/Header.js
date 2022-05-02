@@ -42,6 +42,18 @@ const Header = () => {
                 Home
               </NavLink>
             </li>
+            <li className="md:ml-8 text-xl md:my-0 my-7">
+              <NavLink
+                className={({ isActive }) =>
+                  `text-white font-semibold hover:text-orange-400 ${
+                    isActive ? "border-b-2 border-red-400 pb-1" : ""
+                  }`
+                }
+                to="/blogs"
+              >
+                Blogs
+              </NavLink>
+            </li>
             {user?.uid && (
               <>
                 <li className="md:ml-8 text-xl md:my-0 my-7">
@@ -91,9 +103,9 @@ const Header = () => {
                     onClick={() => signOut(auth)}
                   >
                     Logout
-                  </button>
-                  <span className="text-gray-400 font-semibold hover:text-orange-400 ml-4">
-                    {user.displayName}
+                  </button> 
+                  <span className="text-white bg-orange-500 px-3 pb-1 font-mono rounded-2xl font-bold  ml-4">
+                    {user.displayName.slice(0,1)}
                   </span>
                 </>
               ) : (
