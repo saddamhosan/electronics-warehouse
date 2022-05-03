@@ -10,6 +10,7 @@ import MyItem from './Component/MyItem/MyItem';
 import NotFound from './Component/NotFound/NotFound';
 import ProductUpdate from './Component/ProductUpdate/ProductUpdate';
 import RequireAuth from './Component/RequireAuth/RequireAuth';
+import Services from './Component/Services/Services';
 import Footer from './Component/Shared/Footer';
 import Header from './Component/Shared/Header';
 import SignOut from './Component/SignUp/SignUp';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/services" element={<Services />} />
         <Route
           path="/inventory/:id"
           element={

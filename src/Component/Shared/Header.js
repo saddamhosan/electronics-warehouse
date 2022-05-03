@@ -54,6 +54,18 @@ const Header = () => {
                 Blogs
               </NavLink>
             </li>
+            <li className="md:ml-8 text-xl md:my-0 my-7">
+              <NavLink
+                className={({ isActive }) =>
+                  `text-white font-semibold hover:text-orange-400 ${
+                    isActive ? "border-b-2 border-red-400 pb-1" : ""
+                  }`
+                }
+                to="/Services"
+              >
+                Services
+              </NavLink>
+            </li>
             {user?.uid && (
               <>
                 <li className="md:ml-8 text-xl md:my-0 my-7">
