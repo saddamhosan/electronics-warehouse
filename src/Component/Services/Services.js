@@ -24,10 +24,10 @@ const Services = () => {
             your productivity, saving you time and money.
           </p>
           <div
-            className="grid grid-cols-3 gap-10 my-12
+            className="md:grid grid-cols-3 gap-10 my-12
           "
           >
-            <div className="border hover:border-blue-500 rounded-xl">
+            <div className="border hover:border-blue-500 rounded-xl my-4">
               <img
                 className="w-full h-[200px] rounded-xl rounded-b-none"
                 src={procurement_solutions}
@@ -43,7 +43,7 @@ const Services = () => {
                 within your process.
               </p>
             </div>
-            <div className="border hover:border-blue-500 rounded-xl">
+            <div className="border hover:border-blue-500 rounded-xl my-4">
               <img
                 className="w-full h-[200px] rounded-xl rounded-b-none"
                 src={designspark}
@@ -58,7 +58,7 @@ const Services = () => {
                 your efficiency.
               </p>
             </div>
-            <div className="border hover:border-blue-500 rounded-xl">
+            <div className="border hover:border-blue-500 rounded-xl my-4">
               <img
                 className="w-full h-[200px] rounded-xl rounded-b-none"
                 src={product_support}
@@ -72,7 +72,7 @@ const Services = () => {
                 resources - online or by phone.
               </p>
             </div>
-            <div className="border hover:border-blue-500 rounded-xl">
+            <div className="border hover:border-blue-500 rounded-xl my-4">
               <img
                 className="w-full h-[200px] rounded-xl rounded-b-none"
                 src={delivery_options}
@@ -87,7 +87,7 @@ const Services = () => {
                 it.
               </p>
             </div>
-            <div className="border hover:border-blue-500 rounded-xl">
+            <div className="border hover:border-blue-500 rounded-xl my-4">
               <img
                 className="w-full h-[200px] rounded-xl rounded-b-none"
                 src={invoicing}
@@ -101,7 +101,7 @@ const Services = () => {
                 costs with our invoicing and payment services.
               </p>
             </div>
-            <div className="border hover:border-blue-500 rounded-xl">
+            <div className="border hover:border-blue-500 rounded-xl my-4">
               <img
                 className="w-full h-[200px] rounded-xl rounded-b-none"
                 src={calibration}
@@ -122,8 +122,8 @@ const Services = () => {
             <h1 className="text-2xl text-blue-500 font-semibold my-6">
               Other Services
             </h1>
-            <div className="grid grid-cols-2 gap-12">
-              <div className="flex justify-center items-center bg-slate-200 py-4 rounded-lg">
+            <div className="md:grid grid-cols-2 gap-12">
+              <div className="flex justify-center items-center bg-slate-200 py-4 rounded-lg my-4">
                 <div className="text-5xl text-blue-600 mx-5 bg-white p-5 border-2 rounded-full border-slate-400">
                   <VscAccount />
                 </div>
@@ -136,7 +136,7 @@ const Services = () => {
                   <p className="text-lg text-blue-500">Reed more -></p>
                 </div>
               </div>
-              <div className="flex justify-center items-center bg-slate-200 py-4 rounded-lg">
+              <div className="flex justify-center items-center bg-slate-200 py-4 rounded-lg my-4">
                 <div className="text-5xl text-blue-600 mx-5 bg-white p-5 border-2 rounded-full border-slate-400">
                   <MdManageAccounts />
                 </div>
