@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { BsUiChecksGrid } from "react-icons/bs";
 import { MdManageAccounts } from "react-icons/md";
 import { VscAccount } from "react-icons/vsc";
@@ -13,6 +14,9 @@ import product_support from '../../images/product_support.jpg';
 const Services = () => {
     return (
       <div className="m-10 font-serif">
+        <Helmet>
+          <title>Services - E warehouse</title>
+        </Helmet>
         <h1 className="text-center text-3xl text-blue-500">
           Connect to a full range of services
         </h1>

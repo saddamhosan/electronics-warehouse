@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
@@ -58,7 +59,13 @@ const ManageInventories = () => {
     };
     return (
       <div>
-        <div className="flex justify-center">
+        <Helmet>
+          <title>Manage Inventories - E warehouse</title>
+        </Helmet>
+        <h1 className="text-center text-3xl text-blue-500 font-serif font-bold pt-10 ">
+          Manage Inventories
+        </h1>
+        <div className="flex justify-center ">
           <button
             onClick={() => navigate("/addItem")}
             className="rounded-xl bg-blue-500 my-10 text-white text-xl font-bold px-6 py-2"
@@ -126,7 +133,7 @@ const ManageInventories = () => {
                         onClick={() => handleDeleteProduct(product._id)}
                         className="font-bold text-2xl text-red-600  hover:underline"
                       >
-                        <RiDeleteBin5Line/>
+                        <RiDeleteBin5Line />
                       </button>
                     </td>
                   </tr>
@@ -135,22 +142,20 @@ const ManageInventories = () => {
             </tbody>
           </table>
         </div>
-        <div className="flex justify-end my-5 mx-10 ">
+        <div className="flex justify-end py-5 mx-10">
           {[...Array(totalPage).keys()].map((num) => (
             <button
               onClick={() => setPage(num)}
-              className={`mx-3 border px-3 py-1${
-                page === num
-                  ? "text-blue-600 border-2 border-black font-bold"
-                  : ""
+              className={`mx-3 border px-3 py-1  ${
+                page === num ? "border-2 text-white bg-black font-bold" : ""
               }`}
             >
               {num + 1}
             </button>
           ))}
-          <select 
+          <select
             onChange={(e) => setLimit(e.target.value)}
-            className="bg-black text-white px-3"
+            className="bg-black text-white px-3 "
           >
             <option defaultValue="5">5</option>
             <option value="10">10</option>

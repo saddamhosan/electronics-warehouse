@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Helmet } from "react-helmet-async";
 import { toast } from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
@@ -30,7 +31,10 @@ const AddItem = () => {
 
   return (
     <div className=" bg-slate-100 py-10">
-      <div className="w-11/12 md:w-2/3 mx-auto border border-black py-10 rounded-2xl font-serif">
+      <Helmet>
+        <title>Add Items - E warehouse</title>
+      </Helmet>
+      <div className="w-11/12 md:w-2/3 mx-auto border-8 border-gray-200 py-10 rounded-2xl font-serif">
         <p className="text-center text-3xl text-blue-500 font-bold mb-4">
           Add new product
         </p>

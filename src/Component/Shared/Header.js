@@ -4,6 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
+import logo from '../../images/logo.png';
 
 const Header = () => {
   let [open, setOpen] = useState(false);
@@ -15,6 +16,7 @@ const Header = () => {
             className="flex items-center text-white font-bold text-2xl md:text-3xl cursor-pointer  font-[Poppins] 
       "
           >
+            <img className='w-[60px]' src={logo} alt="" />
             <Link to="/">E warehouse</Link>
           </div>
 
@@ -116,13 +118,16 @@ const Header = () => {
                   >
                     Logout
                   </button> 
-                  <span className="text-white bg-orange-500 px-3 pb-1 font-mono rounded-2xl font-bold  ml-4">
+                  <span className="text-white bg-orange-500 px-3 pb-1 font-mono rounded-full font-bold  ml-4">
                     {user.displayName.slice(0,1)}
                   </span>
                 </>
               ) : (
                 <NavLink
-                  className="text-white font-semibold hover:text-orange-400"
+                  className={({ isActive }) =>
+                      `text-white font-semibold hover:text-orange-400 ${
+                        isActive ? "border-b-2 border-red-400 pb-1" : ""
+                        }`}
                   to="/login"
                 >
                   login

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from "react-firebase-hooks/auth";
+import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { CircleLoader } from 'react-spinners';
@@ -43,6 +44,9 @@ const SignUp = () => {
     }
     return (
       <div className="w-11/12 my-4 md:w-2/5 mx-auto font-serif border rounded-2xl py-5">
+        <Helmet>
+          <title>Register - E warehouse</title>
+        </Helmet>
         <h1 className="text-center text-2xl text-blue-500 font-bold my-3">
           Please Register
         </h1>

@@ -2,6 +2,7 @@ import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Helmet } from 'react-helmet-async';
 import toast from 'react-hot-toast';
 import { RiDeleteBin5Line } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
@@ -66,8 +67,13 @@ const handleDeleteProduct = (id) => {
 
 
     return (
-      <div className='font-serif'>
-        <h1 className='text-3xl text-blue-500 text-center font-bold my-4'>Total my item: {products.length}</h1>
+      <div className="font-serif">
+        <Helmet>
+          <title>My Items - E warehouse</title>
+        </Helmet>
+        <h1 className="text-3xl text-blue-500 text-center font-bold my-4">
+          Total my item: {products.length}
+        </h1>
 
         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
           <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -99,7 +105,8 @@ const handleDeleteProduct = (id) => {
             </thead>
             <tbody>
               {products.map((product) => {
-                const {_id, email, img, name, supplier, price, quantity } = product;
+                const { _id, email, img, name, supplier, price, quantity } =
+                  product;
                 return (
                   <tr
                     key={product._id}
@@ -124,7 +131,7 @@ const handleDeleteProduct = (id) => {
                         onClick={() => handleDeleteProduct(_id)}
                         className="font-bold text-2xl text-red-600  hover:underline"
                       >
-                        <RiDeleteBin5Line/>
+                        <RiDeleteBin5Line />
                       </button>
                     </td>
                   </tr>

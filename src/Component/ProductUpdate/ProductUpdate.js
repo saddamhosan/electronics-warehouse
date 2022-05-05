@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -60,6 +61,9 @@ fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
   const { img, name, supplier, price, quantity, description } = product;
   return (
     <div>
+      <Helmet>
+        <title>Update Product - E warehouse</title>
+      </Helmet>
       <div className="md:flex justify-evenly my-10 items-center mx-10">
         <div className="md:w-1/2">
           <img className="h-[350px]" src={img} alt="" />
