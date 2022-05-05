@@ -118,7 +118,7 @@ const Header = () => {
                   >
                     Logout
                   </button> 
-                  <span className="text-white bg-orange-500 px-3 pb-1 font-mono rounded-full font-bold  ml-4">
+                  <span className="text-white bg-orange-500 px-3 py-1 font-mono rounded-full font-bold  ml-4">
                     {user.displayName.slice(0,1)}
                   </span>
                 </>
