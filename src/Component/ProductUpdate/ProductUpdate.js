@@ -40,22 +40,26 @@ fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
 }
 
 const handleDelivered=()=>{
-const newQuantity = product?.quantity - 1
+  if (product?.quantity > 0) {
+    const newQuantity = product?.quantity - 1;
 
-fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
-  method: "PUT",
-  headers: {
-    "content-type": "application/json",
-  },
-  body: JSON.stringify({ newQuantity }),
-})
-  .then((res) => res.json())
-  .then((data) => {
-    if (data.modifiedCount > 0) {
-      toast.success("successfully delivered",{id:'deliver'});
-      navigate("/manageInventories");
-    }
-  });
+    fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({ newQuantity }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          toast.success("successfully delivered", { id: "deliver" });
+          navigate("/manageInventories");
+        }
+      });
+  } else {
+    toast.error('Product not enough for delivered ',{id:'pd no'})
+  }
 }
 
   const { img, name, supplier, price, quantity, description } = product;
