@@ -11,7 +11,7 @@ const Product = ({product}) => {
     }
 
     return (
-      <div className="shadow-2xl rounded-xl relative">
+      <div className="shadow-2xl rounded-xl relative hover:border border-blue-500">
         <div className="">
           <img
             className="h-[250px] w-full rounded-xl rounded-b-none"
@@ -19,8 +19,8 @@ const Product = ({product}) => {
             alt=""
           />
         </div>
-        <div className="my-6 px-6 ">
-          <p className="text-center text-3xl animate__animated animate__rubberBand text-blue-500 hover:text-blue-900 font-bold font-serif">
+        <div className="my-6 px-6  ">
+          <p className="text-center text-3xl animate__animated animate__rubberBand text-blue-500 font-bold font-serif">
             {name}
           </p>
           <p className="text-lg text-gray-500 my-2">{description}</p>
