@@ -1,3 +1,4 @@
+import "animate.css";
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -12,10 +13,14 @@ const Product = ({product}) => {
     return (
       <div className="shadow-2xl rounded-xl relative">
         <div className="">
-          <img className="h-[250px] w-full rounded-xl rounded-b-none" src={img} alt="" />
+          <img
+            className="h-[250px] w-full rounded-xl rounded-b-none"
+            src={img}
+            alt=""
+          />
         </div>
         <div className="my-6 px-6 ">
-          <p className="text-center text-3xl text-blue-500 font-bold font-serif">
+          <p className="text-center text-3xl animate__animated animate__rubberBand text-blue-500 hover:text-blue-900 font-bold font-serif">
             {name}
           </p>
           <p className="text-lg text-gray-500 my-2">{description}</p>

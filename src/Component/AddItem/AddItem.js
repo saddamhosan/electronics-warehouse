@@ -35,7 +35,7 @@ const AddItem = () => {
         <title>Add Items - E warehouse</title>
       </Helmet>
       <div className="w-11/12 md:w-2/3 mx-auto border-8 border-gray-200 py-10 rounded-2xl font-serif">
-        <p className="text-center text-3xl text-blue-500 font-bold mb-4">
+        <p className="animate__animated animate__rubberBand text-center text-3xl text-blue-500 font-bold mb-4">
           Add new product
         </p>
         <form onSubmit={handleAddItem}>

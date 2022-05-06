@@ -62,7 +62,7 @@ const ManageInventories = () => {
         <Helmet>
           <title>Manage Inventories - E warehouse</title>
         </Helmet>
-        <h1 className="text-center text-3xl text-blue-500 font-serif font-bold pt-10 ">
+        <h1 className="animate__animated animate__rubberBand text-center text-3xl text-blue-500 font-serif font-bold pt-10 ">
           Manage Inventories
         </h1>
         <div className="flex justify-center ">

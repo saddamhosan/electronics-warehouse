@@ -71,7 +71,7 @@ const handleDeleteProduct = (id) => {
         <Helmet>
           <title>My Items - E warehouse</title>
         </Helmet>
-        <h1 className="text-3xl text-blue-500 text-center font-bold my-4">
+        <h1 className="animate__animated animate__rubberBand text-3xl text-blue-500 text-center font-bold my-4">
           Total my item: {products.length}
         </h1>
 
