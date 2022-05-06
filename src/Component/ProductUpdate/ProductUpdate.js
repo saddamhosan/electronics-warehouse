@@ -15,7 +15,8 @@ const ProductUpdate = () => {
       );
       setProduct(data);
     })();
-  }, [id]);
+  }, [id,product]);
+
 
 const handleQuantity=(e)=>{
   e.preventDefault()
@@ -33,8 +34,10 @@ fetch(`https://enigmatic-beach-29740.herokuapp.com/product/${id}`, {
   .then((res) => res.json())
   .then((data) => {
     if (data.modifiedCount > 0) {
-      toast.success(`Added ${quantity} product Successfully `,{id:'add pd'});
-      navigate("/manageInventories");
+      toast.success(`Added ${quantity} product Successfully `, {
+        id: "add pd",
+      });
+      e.target.reset();
     }
   });
 }
@@ -54,7 +57,6 @@ const handleDelivered=()=>{
       .then((data) => {
         if (data.modifiedCount > 0) {
           toast.success("successfully delivered", { id: "deliver" });
-          navigate("/manageInventories");
         }
       });
   } else {
