@@ -103,6 +103,7 @@ const ManageInventories = () => {
             <tbody>
               {products.map((product) => {
                 const { _id, img, name, supplier, price, quantity } = product;
+                
                 return (
                   <tr
                     key={product._id}
@@ -115,7 +116,9 @@ const ManageInventories = () => {
                       {name}
                     </th>
                     <td className="px-6 py-4"> {supplier} </td>
-                    <td className="px-6 py-4">{quantity}</td>
+                    <td className="px-6 py-4">
+                      {quantity ? quantity : <span className='text-orange-500 font-bold'>Sold Out</span>}
+                    </td>
                     <td className="px-6 py-4">$ {price}</td>
                     <td className="px-6 py-4">
                       <img className="w-24" src={img} alt="" />

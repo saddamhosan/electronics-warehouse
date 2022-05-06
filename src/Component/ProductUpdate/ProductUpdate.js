@@ -83,7 +83,13 @@ const handleDelivered=()=>{
           </p>
           <p className="text-xl font-bold">
             Quantity:{" "}
-            <span className="text-xl text-gray-600 font-bold">{quantity}</span>
+            <span className="text-xl text-gray-600 font-bold">
+              {quantity ? (
+                quantity
+              ) : (
+                <span className="text-orange-500 font-bold">Sold Out</span>
+              )}
+            </span>
           </p>
           <p className="text-xl font-bold">
             Price:{" "}
