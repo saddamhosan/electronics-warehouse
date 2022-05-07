@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 const ManageInventories = () => {
   const [page,setPage]=useState(0)
-  const [limit,setLimit]=useState(5)
+  const [limit,setLimit]=useState(10)
   const [totalPage,setTotalPage]=useState(0)
   const navigate=useNavigate()
     const [products, setProducts] = useState([]);
@@ -157,10 +157,11 @@ const ManageInventories = () => {
             </button>
           ))}
           <select
+            defaultValue={limit}
             onChange={(e) => setLimit(e.target.value)}
             className="bg-black text-white px-3 "
           >
-            <option defaultValue="5">5</option>
+            <option value="5">5</option>
             <option value="10">10</option>
             <option value="15">15</option>
           </select>
