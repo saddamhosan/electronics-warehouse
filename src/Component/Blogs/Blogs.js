@@ -70,17 +70,18 @@ const Blogs = () => {
             Q:What is the purpose of jwt and how does it work
           </h1>
           <p>
-            Ans:JSON Web Token, is an open standard used to share security
-            information between two parties — a client and a server. Each JWT
-            contains encoded JSON objects, including a set of claims. JWTs are
-            signed using a cryptographic algorithm to ensure that the claims
-            cannot be altered after the token is issued. <br />
-            JWTs differ from other web tokens in that they contain a set of
-            claims. Claims are used to transmit information between two parties.
-            What these claims are depends on the use case at hand. For example,
-            a claim may assert who issued the token, how long it is valid for,
-            or what permissions the client has been granted. A JWT is a string
-            made up of three parts, separated by dots (.)
+            Ans: JSON Web Token, is an
+            open fashionable used to percentage protection records among parties
+            — a purchaser and a server. Each JWT includes encoded JSON objects,
+            along with a fixed of claims. JWTs are signed the usage of a
+            cryptographic set of rules to make sure that the claims can not be
+            altered after the token is issued.<br/> JWTs vary from different net
+            tokens in that they include a fixed of claims. Claims are used to
+            transmit records among parties. What those claims are relies upon at
+            the use case at hand. For example, a declare can also additionally
+            assert who issued the token, how lengthy it's far legitimate for, or
+            what permissions the purchaser has been granted. A JWT is a string
+            made of 3 parts, separated through dots (.)
           </p>
         </div>
       </div>
