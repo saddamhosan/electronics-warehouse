@@ -27,3 +27,11 @@
 - JsonWebToken
 - Mongodb
 - Heroku
+
+## functionality
+
+- user can login with email password and google
+- user can add and delete product
+- user can visit home,blogs and services without login
+- user can't visit update product,inventories,add item and my items without login
+- if user forget password, user can reset password
